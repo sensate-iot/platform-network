@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30128.74
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SensateIoT.Platform.Network.Contracts", "SensateIoT.Platform.Network.Contracts\SensateIoT.Platform.Network.Contracts.csproj", "{6BD51202-2FD5-4E6E-9BAA-6239E2C2E9D7}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SensateIoT.Platform.Network.Database", "SensateIoT.Platform.Network.Database", "{BDB01793-EB03-47FA-B4BE-DB29A55DCB78}"
 	ProjectSection(SolutionItems) = preProject
 		SensateIoT.Platform.Network.Database\extensions.sql = SensateIoT.Platform.Network.Database\extensions.sql
@@ -33,8 +31,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SensateIoT.Platform.Network.Tests", "SensateIoT.Platform.Network.Tests\SensateIoT.Platform.Network.Tests.csproj", "{759F0161-8102-442B-9535-4620E2B75415}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SensateIoT.Platform.Network.LoadTest", "SensateIoT.Platform.Network.LoadTest\SensateIoT.Platform.Network.LoadTest.csproj", "{7C240126-E527-487A-923F-77EDAD011675}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SensateIoT.Platform.Network.Router", "SensateIoT.Platform.Network.Router\SensateIoT.Platform.Network.Router.csproj", "{18250CDA-1A64-4C23-982C-1CD0C155A46A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SensateIoT.Platform.Network.TriggerService", "SensateIoT.Platform.Network.TriggerService\SensateIoT.Platform.Network.TriggerService.csproj", "{E8CAC519-C3FB-4E9B-A295-1CC78676870C}"
 EndProject
@@ -129,10 +125,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6BD51202-2FD5-4E6E-9BAA-6239E2C2E9D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6BD51202-2FD5-4E6E-9BAA-6239E2C2E9D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6BD51202-2FD5-4E6E-9BAA-6239E2C2E9D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6BD51202-2FD5-4E6E-9BAA-6239E2C2E9D7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C6258E1B-4A0F-4D00-B8CA-4A262F42ADB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C6258E1B-4A0F-4D00-B8CA-4A262F42ADB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6258E1B-4A0F-4D00-B8CA-4A262F42ADB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -153,10 +145,6 @@ Global
 		{7C240126-E527-487A-923F-77EDAD011675}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C240126-E527-487A-923F-77EDAD011675}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C240126-E527-487A-923F-77EDAD011675}.Release|Any CPU.Build.0 = Release|Any CPU
-		{18250CDA-1A64-4C23-982C-1CD0C155A46A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{18250CDA-1A64-4C23-982C-1CD0C155A46A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{18250CDA-1A64-4C23-982C-1CD0C155A46A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{18250CDA-1A64-4C23-982C-1CD0C155A46A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E8CAC519-C3FB-4E9B-A295-1CC78676870C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E8CAC519-C3FB-4E9B-A295-1CC78676870C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E8CAC519-C3FB-4E9B-A295-1CC78676870C}.Release|Any CPU.ActiveCfg = Release|Any CPU
