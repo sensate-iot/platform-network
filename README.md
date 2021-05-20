@@ -5,26 +5,11 @@
 This is the core network solution for the Sensate IoT data platform. This
 solution contains all network infrastructure services:
 
-- Message Router
 - Gateway + configuration API
 - Trigger service
 - Storage service
 - Live data service
 - Database definition
-
-## Router
-
-The message router is at the core of Sensate IoT and responsible for routing
-messages between various systems. The router uses the MQTT protocol to route
-messages to:
-
-- Trigger services;
-- Storage services;
-- Live data services;
-- Public MQTT broker.
-
-The router routes both SO (Sensor Originating, or measurements) and ST (Sensor
-Terminating, or actuator) messages.
 
 ## Gateway
 
