@@ -5,8 +5,6 @@
  * @email  michel@michelmegens.net
  */
 
-using System;
-
 using MongoDB.Bson;
 
 namespace SensateIoT.Platform.Network.Data.DTO

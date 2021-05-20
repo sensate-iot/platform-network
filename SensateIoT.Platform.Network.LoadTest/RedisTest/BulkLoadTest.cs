@@ -22,7 +22,6 @@ namespace SensateIoT.Platform.Network.LoadTest.RedisTest
 	public class BulkLoadTest
 	{
 		private readonly DistributedCacheOptions m_options;
-		private readonly bool m_gzip;
 
 		protected IDatabase m_database;
 		private IConnectionMultiplexer m_connectionMultiplexer;
@@ -34,7 +33,6 @@ namespace SensateIoT.Platform.Network.LoadTest.RedisTest
 			}
 
 			this.m_options = options.Value;
-			this.m_gzip = options.Value.Gzip;
 		}
 
 		private async Task ConnectAsync(CancellationToken ct)
