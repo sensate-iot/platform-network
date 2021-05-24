@@ -10,7 +10,7 @@ FROM node:14-alpine AS builder
 
 WORKDIR /usr/src/app
 
-COPY SensateIoT.Platform.Network.Contracts ./Contracts
+COPY SensateIoT.Platform.Network.LiveDataService/contracts ./Contracts
 COPY SensateIoT.Platform.Network.LiveDataService/package*.json ./
 COPY SensateIoT.Platform.Network.LiveDataService/tsconfig*.json ./
 COPY SensateIoT.Platform.Network.LiveDataService/src ./src
