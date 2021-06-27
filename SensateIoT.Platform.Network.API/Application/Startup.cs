@@ -19,7 +19,6 @@ using Microsoft.OpenApi.Models;
 using SensateIoT.Platform.Network.Adapters.Abstract;
 using SensateIoT.Platform.Network.Adapters.Blobs;
 using SensateIoT.Platform.Network.API.Abstract;
-using SensateIoT.Platform.Network.API.Authorization;
 using SensateIoT.Platform.Network.API.Config;
 using SensateIoT.Platform.Network.API.DTO;
 using SensateIoT.Platform.Network.API.Extensions;
@@ -93,9 +92,6 @@ namespace SensateIoT.Platform.Network.API.Application
 			services.AddScoped<IAuditLogRepository, AuditLogRepository>();
 
 			services.AddSingleton<IBlobService, FilesystemBlobService>();
-			services.AddSingleton<IMeasurementAuthorizationService, MeasurementAuthorizationService>();
-			services.AddSingleton<IMessageAuthorizationService, MessageAuthorizationService>();
-			services.AddSingleton<IHashAlgorithm, SHA256Algorithm>();
 			services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
 			services.AddHostedService<BatchRoutingService>();
