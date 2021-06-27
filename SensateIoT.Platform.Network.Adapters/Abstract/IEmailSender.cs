@@ -13,6 +13,5 @@ namespace SensateIoT.Platform.Network.Adapters.Abstract
 	public interface IEmailSender
 	{
 		Task SendEmailAsync(string recip, string subj, EmailBody body);
-		Task SendEmailAsync(string recip, string subj, string body);
 	}
 }

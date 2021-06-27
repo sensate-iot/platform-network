@@ -26,11 +26,6 @@ namespace SensateIoT.Platform.Network.Adapters.Mail
 			this._options = opts.Value;
 		}
 
-		public async Task SendEmailAsync(string recip, string subj, string body)
-		{
-			await this.Execute(this._options.Key, recip, subj, body);
-		}
-
 		public async Task SendEmailAsync(string recip, string subj, EmailBody body)
 		{
 			await this.Execute(recip, subj, body);
