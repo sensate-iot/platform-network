@@ -44,14 +44,5 @@ namespace SensateIoT.Platform.Network.Adapters.Mail
 
 			await this._client.SendMailAsync(msg).ConfigureAwait(false);
 		}
-
-		public async Task SendEmailAsync(string recip, string subj, string body)
-		{
-			var msg = new EmailBody {
-				HtmlBody = body
-			};
-
-			await this.SendEmailAsync(recip, subj, msg).ConfigureAwait(false);
-		}
 	}
 }

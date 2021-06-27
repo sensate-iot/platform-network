@@ -28,17 +28,6 @@ namespace SensateIoT.Platform.Network.Adapters.Blobs
 			this.m_path = options.Value.StoragePath;
 		}
 
-		public async Task StoreAsync(Blob blob, byte[] data, CancellationToken ct = default)
-		{
-			blob.Path = $"{this.BasePath}{blob.SensorID}";
-			blob.StorageType = StorageType.FileSystem;
-
-			Directory.CreateDirectory(blob.Path);
-			using(var stream = new FileStream($"{blob.Path}{Path.DirectorySeparatorChar}{blob.FileName}", FileMode.Create)) {
-				await stream.WriteAsync(data, 0, data.Length, ct).ConfigureAwait(false);
-			}
-		}
-
 		public async Task<byte[]> ReadAsync(Blob blob, CancellationToken ct)
 		{
 			return await Task.Run(() => {
