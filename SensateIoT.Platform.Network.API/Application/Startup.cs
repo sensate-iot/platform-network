@@ -94,7 +94,6 @@ namespace SensateIoT.Platform.Network.API.Application
 			services.AddSingleton<IBlobService, FilesystemBlobService>();
 			services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
-			services.AddHostedService<BatchRoutingService>();
 			services.AddHostedService<MetricsService>();
 
 			services.AddSwaggerGen(c => {
