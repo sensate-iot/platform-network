@@ -1,6 +1,6 @@
 ﻿using System;
 using Google.Protobuf;
-using SensateIoT.Platform.Network.Contracts.DTO;
+using SensateIoT.Platform.Router.Contracts.DTO;
 using SensateIoT.Platform.Network.Data.DTO;
 
 namespace SensateIoT.Platform.Network.Common.Converters

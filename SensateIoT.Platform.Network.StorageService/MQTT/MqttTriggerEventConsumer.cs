@@ -11,7 +11,7 @@ using JetBrains.Annotations;
 using MongoDB.Bson;
 
 using SensateIoT.Platform.Network.Common.MQTT;
-using SensateIoT.Platform.Network.Contracts.DTO;
+using SensateIoT.Platform.Router.Contracts.DTO;
 using SensateIoT.Platform.Network.Data.Enums;
 using SensateIoT.Platform.Network.DataAccess.Abstract;
 

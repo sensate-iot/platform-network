@@ -7,10 +7,11 @@
 
 using System.Collections.Generic;
 using System.Linq;
+
 using MongoDB.Bson;
 using MongoDB.Driver.GeoJsonObjectModel;
 
-using SensateIoT.Platform.Network.Contracts.DTO;
+using SensateIoT.Platform.Router.Contracts.DTO;
 
 using DataPoint = SensateIoT.Platform.Network.Data.Models.DataPoint;
 using Measurement = SensateIoT.Platform.Network.Data.Models.Measurement;

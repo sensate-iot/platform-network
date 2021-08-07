@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 using Grpc.Core;
 
-using SensateIoT.Platform.Network.Contracts.Services;
+using SensateIoT.Platform.Router.Contracts.Services;
 
 namespace SensateIoT.Platform.Network.LoadTest.RouterTest
 {

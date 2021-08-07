@@ -10,7 +10,7 @@ using System.Collections.Generic;
 
 using Google.Protobuf.WellKnownTypes;
 
-using SensateIoT.Platform.Network.Contracts.DTO;
+using SensateIoT.Platform.Router.Contracts.DTO;
 
 namespace SensateIoT.Platform.Network.LoadTest.RouterTest
 {

@@ -12,7 +12,7 @@ using System.Linq;
 using Google.Protobuf.WellKnownTypes;
 using MongoDB.Bson;
 
-using SensateIoT.Platform.Network.Contracts.DTO;
+using SensateIoT.Platform.Router.Contracts.DTO;
 
 using Measurement = SensateIoT.Platform.Network.Data.DTO.Measurement;
 
@@ -20,9 +20,9 @@ namespace SensateIoT.Platform.Network.Common.Converters
 {
 	public class MeasurementProtobufConverter
 	{
-		public static Contracts.DTO.Measurement Convert(Measurement measurement)
+		public static Router.Contracts.DTO.Measurement Convert(Measurement measurement)
 		{
-			var m = new Contracts.DTO.Measurement {
+			var m = new Router.Contracts.DTO.Measurement {
 				Latitude = System.Convert.ToDouble(measurement.Latitude),
 				Longitude = System.Convert.ToDouble(measurement.Longitude),
 				PlatformTime = Timestamp.FromDateTime(measurement.PlatformTimestamp),
@@ -48,7 +48,7 @@ namespace SensateIoT.Platform.Network.Common.Converters
 			var data = new MeasurementData();
 
 			foreach(var measurement in measurements) {
-				var m = new Contracts.DTO.Measurement {
+				var m = new Router.Contracts.DTO.Measurement {
 					Latitude = System.Convert.ToDouble(measurement.Latitude),
 					Longitude = System.Convert.ToDouble(measurement.Longitude),
 					PlatformTime = Timestamp.FromDateTime(measurement.PlatformTimestamp),
@@ -72,7 +72,7 @@ namespace SensateIoT.Platform.Network.Common.Converters
 			return data;
 		}
 
-		public static Measurement Convert(Contracts.DTO.Measurement measurement)
+		public static Measurement Convert(Router.Contracts.DTO.Measurement measurement)
 		{
 			return new Measurement {
 				Data = measurement.Datapoints.ToDictionary(x => x.Key, x => new Data.DTO.DataPoint {

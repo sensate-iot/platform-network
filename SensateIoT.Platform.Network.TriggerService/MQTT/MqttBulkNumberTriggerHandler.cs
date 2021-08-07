@@ -28,7 +28,7 @@ using MongoDB.Driver.GeoJsonObjectModel;
 using SensateIoT.Platform.Network.Common.Converters;
 using SensateIoT.Platform.Network.Common.Helpers;
 using SensateIoT.Platform.Network.Common.MQTT;
-using SensateIoT.Platform.Network.Contracts.DTO;
+using SensateIoT.Platform.Router.Contracts.DTO;
 using SensateIoT.Platform.Network.Data.DTO;
 using SensateIoT.Platform.Network.TriggerService.Abstract;
 using SensateIoT.Platform.Network.TriggerService.Config;

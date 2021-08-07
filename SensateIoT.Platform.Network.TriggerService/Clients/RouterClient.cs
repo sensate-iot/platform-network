@@ -14,7 +14,7 @@ using Grpc.Core;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
-using SensateIoT.Platform.Network.Contracts.Services;
+using SensateIoT.Platform.Router.Contracts.Services;
 using SensateIoT.Platform.Network.Data.Abstract;
 using SensateIoT.Platform.Network.Data.Models;
 using SensateIoT.Platform.Network.TriggerService.Abstract;
@@ -37,7 +37,7 @@ namespace SensateIoT.Platform.Network.TriggerService.Clients
 
 		public async Task RouteControlMessageAsync(ControlMessage msg, ControlMessageType type)
 		{
-			var controlMessage = new Contracts.DTO.ControlMessage {
+			var controlMessage = new Router.Contracts.DTO.ControlMessage {
 				Data = msg.Data,
 				Timestamp = Timestamp.FromDateTime(msg.Timestamp),
 				SensorID = msg.SensorId.ToString(),
