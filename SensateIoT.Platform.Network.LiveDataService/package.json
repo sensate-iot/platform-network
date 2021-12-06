@@ -1,10 +1,10 @@
 {
   "name": "live-data-service",
-  "version": "1.4.6",
+  "version": "1.4.7",
   "description": "Live data service project.",
   "main": "dist/src/live-data-service.js",
   "scripts": {
-    "start": "node dist/src/app/live-data-service.js",
+    "start": "node dist/app/live-data-service.js",
     "build": "tsc --skipLibCheck -t ES2018 --noUnusedLocals --noImplicitReturns",
     "generate-js": "node node_modules/protobufjs/bin/pbjs -t static-module -w commonjs -o generated/proto.js contracts/DTO/Measurement.proto contracts/DTO/Message.proto contracts/DTO/ControlMessage.proto",
     "generate-ts": " node node_modules/protobufjs/bin/pbts -o generated/proto.d.ts generated/proto.js",
@@ -20,15 +20,15 @@
   "devDependencies": {
     "@types/async": "^2.4.2",
     "@types/express": "^4.17.13",
-    "@types/jsonwebtoken": "^8.5.4",
+    "@types/jsonwebtoken": "^8.5.6",
     "@types/mongodb": "^3.6.20",
     "@types/mongoose": "^5.11.97",
     "@types/node": "^8.10.64",
     "@types/pg": "^7.14.11",
     "@types/ws": "^6.0.4",
-    "nodemon": "^2.0.12",
+    "nodemon": "^2.0.15",
     "ts-node": "^8.10.2",
-    "typescript": "^4.3.5"
+    "typescript": "^4.4.2"
   },
   "dependencies": {
     "async": "^2.6.3",
@@ -37,8 +37,8 @@
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "moment": "^2.29.0",
-    "mongoose": "^5.13.5",
-    "mqtt": "^3.0.0",
+    "mongoose": "^5.13.13",
+    "mqtt": "^4.2.8",
     "pg": "^8.7.1",
     "pg-hstore": "^2.3.4",
     "pg-pool": "^3.4.1",

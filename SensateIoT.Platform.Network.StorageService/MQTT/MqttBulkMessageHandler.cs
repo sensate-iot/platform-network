@@ -67,9 +67,7 @@ namespace SensateIoT.Platform.Network.StorageService.MQTT
 				}
 
 			} catch(Exception ex) {
-				this.m_logger.LogWarning("Unable to store message: {exception} " +
-										 "Message content: {message}. " +
-										 "Stack trace: ", ex.Message, message, ex.StackTrace);
+				this.m_logger.LogWarning(ex, "Unable to store message. Message content: {message}. ", message);
 			}
 
 			sw.Stop();
