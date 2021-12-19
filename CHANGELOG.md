@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Updated
 - Resubscription logic in the abstract MQTT client
 - Database `TIMESTAMP` types (changed to `TIMESTAMP WITH TIME ZONE`)
+- Protobuf contracts
 
 ## [1.8.1] - 06-12-2021
 ### Updated
