@@ -13,7 +13,7 @@
     <PackageReference Include="Microsoft.Extensions.Logging" Version="6.0.0" />
     <PackageReference Include="Microsoft.Extensions.Options" Version="6.0.0" />
     <PackageReference Include="SendGrid" Version="9.25.1" />
-    <PackageReference Include="Twilio" Version="5.68.2" />
+    <PackageReference Include="Twilio" Version="5.69.0" />
   </ItemGroup>
 
 
