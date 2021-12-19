@@ -5,7 +5,7 @@ CREATE FUNCTION networkapi_deleteblobsbysensorid(sensorid VARCHAR(24))
 		"FileName" TEXT,
 		"Path" TEXT,
 		"StorageType" INTEGER,
-		"Timestamp" TIMESTAMP,
+		"Timestamp" TIMESTAMP WITH TIME ZONE,
 		"FileSize" BIGINT
                  )
     LANGUAGE plpgsql

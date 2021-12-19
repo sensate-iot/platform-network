@@ -5,7 +5,7 @@ CREATE FUNCTION networkapi_selectblobs(idlist TEXT, offst INTEGER DEFAULT NULL, 
 		"FileName" TEXT,
 		"Path" TEXT,
 		"StorageType" INTEGER,
-		"Timestamp" TIMESTAMP,
+		"Timestamp" TIMESTAMP WITH TIME ZONE,
 		"FileSize" BIGINT
                  )
     LANGUAGE plpgsql

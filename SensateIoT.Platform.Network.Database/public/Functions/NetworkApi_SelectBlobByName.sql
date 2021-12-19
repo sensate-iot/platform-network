@@ -5,7 +5,7 @@ CREATE FUNCTION networkapi_selectblobbyname(sensorid VARCHAR(24), filename TEXT)
 		"FileName" TEXT,
 		"Path" TEXT,
 		"StorageType" INTEGER,
-		"Timestamp" TIMESTAMP,
+		"Timestamp" TIMESTAMP WITH TIME ZONE,
 		"FileSize" BIGINT
                  )
     LANGUAGE plpgsql
