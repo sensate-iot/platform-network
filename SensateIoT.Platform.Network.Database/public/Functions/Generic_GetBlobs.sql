@@ -1,6 +1,6 @@
 CREATE FUNCTION generic_getblobs(idlist TEXT,
-                                      start TIMESTAMP,
-                                      "end" TIMESTAMP,
+                                      start TIMESTAMP WITH TIME ZONE,
+                                      "end" TIMESTAMP WITH TIME ZONE,
                                       ofst INTEGER DEFAULT NULL,
                                       lim INTEGER DEFAULT NULL,
                                       direction VARCHAR(12) DEFAULT 'ASC'
@@ -10,7 +10,7 @@ CREATE FUNCTION generic_getblobs(idlist TEXT,
         "SensorID" VARCHAR(24),
         "Path" TEXT,
         "StorageType" INTEGER,
-        "Timestamp" TIMESTAMP,
+        "Timestamp" TIMESTAMP WITH TIME ZONE,
         "FileSize" BIGINT
                  )
     LANGUAGE plpgsql

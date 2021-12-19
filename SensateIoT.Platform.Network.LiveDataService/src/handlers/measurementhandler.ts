@@ -18,7 +18,7 @@ export class MeasurementHandler implements IMessageHandler {
 
     public async handle(topic: string, data: string) {
         const msg = await this.decode(data);
-        const measurements = sensateiot.MeasurementData.decode(msg);
+        const measurements = sensateiot.router.MeasurementData.decode(msg);
         const blocks = this.groupMeasurements(measurements);
 
         blocks.forEach(block => {
@@ -44,7 +44,7 @@ export class MeasurementHandler implements IMessageHandler {
         });
     }
 
-    private groupMeasurements(measurements: sensateiot.MeasurementData): BulkMeasurementInfo[] {
+    private groupMeasurements(measurements: sensateiot.router.MeasurementData): BulkMeasurementInfo[] {
         const result: BulkMeasurementInfo[] = [];
 
         const sorted = measurements.Measurements.sort((a, b) => {
@@ -76,7 +76,7 @@ export class MeasurementHandler implements IMessageHandler {
             block.measurements = new Array<Measurement>();
             block.sensorId = ObjectId.createFromHexString(id);
 
-            dict[id].forEach((elem: sensateiot.Measurement) => {
+            dict[id].forEach((elem: sensateiot.router.Measurement) => {
                 const m = new Measurement();
 
                 m.data = new Map();

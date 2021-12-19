@@ -1,5 +1,5 @@
 ﻿/*
- * Network events.
+ * Router events.
  *
  * @author Michel Megens
  * @email  michel@michelmegens.net
@@ -7,8 +7,8 @@
 
 syntax = "proto3";
 
-package sensateiot;
-option csharp_namespace = "SensateIoT.Platform.Network.Contracts.DTO";
+package sensateiot.router;
+option csharp_namespace = "SensateIoT.Platform.Router.Contracts.DTO";
 
 enum NetworkEventType
 {
@@ -16,6 +16,7 @@ enum NetworkEventType
 	MessageStorage = 1;
 	MessageTriggered = 2;
 	MessageLiveData = 3;
+	MessageDropped = 4;
 }
 
 enum NetworkMessageType
@@ -25,7 +26,7 @@ enum NetworkMessageType
 	ControlMessage = 2;
 }
 
-message NetworkEvent
+message NetworkEvent 
 {
 	repeated NetworkEventType Actions = 1;
 	NetworkMessageType MessageType = 2;

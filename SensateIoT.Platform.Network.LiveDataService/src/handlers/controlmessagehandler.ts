@@ -19,7 +19,7 @@ export class ControlMessageHandler implements IMessageHandler {
 
     public async handle(topic: string, data: string) {
         const msg = await this.decode(data);
-        const messages = sensateiot.ControlMessageData.decode(msg);
+        const messages = sensateiot.router.ControlMessageData.decode(msg);
         const blocks = this.groupMessages(messages);
 
         console.debug("Handling control message live data.");
@@ -48,7 +48,7 @@ export class ControlMessageHandler implements IMessageHandler {
         });
     }
 
-    private groupMessages(messages: sensateiot.ControlMessageData): BulkControlMessage[] {
+    private groupMessages(messages: sensateiot.router.ControlMessageData): BulkControlMessage[] {
         const result: BulkControlMessage[] = [];
 
         const sorted = messages.Messages.sort((a, b) => {
@@ -80,7 +80,7 @@ export class ControlMessageHandler implements IMessageHandler {
             block.messages = new Array<ControlMessage>();
             block.sensorId = ObjectId.createFromHexString(id);
 
-            dict[id].forEach((elem: sensateiot.ControlMessage) => {
+            dict[id].forEach((elem: sensateiot.router.ControlMessage) => {
                 const m = new ControlMessage();
 
                 m.data = elem.Data;
