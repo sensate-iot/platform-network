@@ -19,7 +19,7 @@ export class MessageHandler implements IMessageHandler {
 
     public async handle(topic: string, data: string) {
         const msg = await this.decode(data);
-        const messages = sensateiot.TextMessageData.decode(msg);
+        const messages = sensateiot.router.TextMessageData.decode(msg);
         const blocks = this.groupMessages(messages);
 
         blocks.forEach(block => {
@@ -45,7 +45,7 @@ export class MessageHandler implements IMessageHandler {
         });
     }
 
-    private groupMessages(messages: sensateiot.TextMessageData): BulkMessageInfo[] {
+    private groupMessages(messages: sensateiot.router.TextMessageData): BulkMessageInfo[] {
         const result: BulkMessageInfo[] = [];
 
         const sorted = messages.Messages.sort((a, b) => {
@@ -77,7 +77,7 @@ export class MessageHandler implements IMessageHandler {
             block.messages = new Array<Message>();
             block.sensorId = ObjectId.createFromHexString(id);
 
-            dict[id].forEach((elem: sensateiot.TextMessage) => {
+            dict[id].forEach((elem: sensateiot.router.TextMessage) => {
                 const m = new Message();
 
                 m.data = elem.Data;

@@ -9,7 +9,7 @@
     "maxConnections": 300
   },
   "postgresql": {
-    "connectionString": "postgres://postgres:DefaultPassword@localhost:5432/Sensate"
+    "connectionString": "postgres://postgres:DefaultPassword@localhost:5432/SensateIoT"
   },
   "mqtt": {
     "username": "",
