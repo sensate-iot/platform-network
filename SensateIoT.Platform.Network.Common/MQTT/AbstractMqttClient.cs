@@ -19,7 +19,7 @@ using MQTTnet;
 using MQTTnet.Client;
 using MQTTnet.Client.Options;
 using MQTTnet.Client.Subscribing;
-
+using MQTTnet.Exceptions;
 using SensateIoT.Platform.Network.Common.Services.Background;
 
 namespace SensateIoT.Platform.Network.Common.MQTT
@@ -121,8 +121,18 @@ namespace SensateIoT.Platform.Network.Common.MQTT
 			var opts = new MqttClientSubscribeOptionsBuilder()
 				.WithTopicFilter(build);
 
-			await this.Client.SubscribeAsync(opts.Build(), CancellationToken.None);
+			await this.TrySubscribeAsync(topic, opts.Build());
 			this._logger.LogInformation($"Subscribed to: {topic}");
+		}
+
+		private async Task TrySubscribeAsync(string topic, MqttClientSubscribeOptions options)
+		{
+			try {
+				await this.Client.SubscribeAsync(options, CancellationToken.None);
+			} catch(MqttCommunicationTimedOutException ex) {
+				this._logger.LogCritical(ex, "Subscribing to {topicName} timed out", topic);
+				Environment.Exit(1);
+			}
 		}
 
 		protected virtual async Task OnConnectAsync()
